@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kenia&family=League+Spartan:wght@100&family=Lobster&family=Montserrat&family=Orbitron&family=Poppins:wght@100;200;300&family=Roboto&family=Rubik&family=Rubik+Mono+One&family=Russo+One&family=Staatliches&family=VT323&family=Vina+Sans&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+:root{
+    --logo:black;
+    --navlink:black;
+    --navlinkh:grey;
+}
+
+
+
+.navbar-brand{
+    font-size: 2rem;
+    color: var(--logo);
+    font-family: 'Lobster', cursive;
+}
+.navbar-brand:hover{
+    color: var(--logo);
+}
+.nav-link{
+    margin-right: 10px;
+    margin-left: 10px;
+    color: var(--navlink);
+    font-family: 'Rubik', sans-serif;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+.nav-link:hover{
+    color: var(--navlinkh);
+}
+
+.main{
+    background-color:  #98DBC6;
+}
+.main h1{
+    font-size: 5rem;
+    font-weight: 600;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+.btn1{
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color:#ec8092;
+    color: white;
+    font-weight: 700;
+    border-radius: 60px ;
+}
+.btn1:hover{
+    background-color:#f0425f;
+}
+.btn2{
+    background-color: #00A6A6;
+    border-radius: 60px;
+    height: 55px;
+    width: 65%;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    border: none;
+}
+.btn2:hover{
+ background: white;
+ border: 2px solid #00A6A6;
+ color: #00A6A6;
+ scale: 10vh;
+}
