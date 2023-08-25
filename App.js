@@ -6,63 +6,69 @@ import {
   getDownloadURL,
   getStorage,
   listAll,
-  list,
 } from "firebase/storage";
 import { storage } from "./firebase";
 import { v4 } from "uuid";
 
-
 function App() {
-
-  const [imageUpload, setImageUpload] = useState(null);
-  const [imageUrls, setImageUrls] = useState([]);
+  const [fileUpload, setFileUpload] = useState(null);
+  const [fileInfo, setFileInfo] = useState([]);
   const [url, setUrl] = useState("");
-  //const storageRef = firebase.storage().ref();
-  //let downloadUrl = await storageRef.child('path/to/your/file').getDownloadURL();
 
-  const imagesListRef = ref(storage, "images/");
+  const filesListRef = ref(storage, "files/");
+
   const uploadFile = () => {
-    if (imageUpload == null) return;
-    setUrl("Getting url link..");
-    const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
-    uploadBytes(imageRef, imageUpload).then((snapshot) => {
+    if (fileUpload == null) return;
+    setUrl("Getting file link..");
+    const fileRef = ref(storage, `files/${fileUpload.name + v4()}`);
+    uploadBytes(fileRef, fileUpload).then((snapshot) => {
       getDownloadURL(snapshot.ref).then((url) => {
         setUrl(url);
-        setImageUrls((prev) => [...prev, url]);
+        setFileInfo((prev) => [...prev, { name: fileUpload.name, url }]);
       });
     });
   };
 
   useEffect(() => {
-    listAll(imagesListRef).then((response) => {
+    listAll(filesListRef).then((response) => {
+      const newFiles = [];
       response.items.forEach((item) => {
         getDownloadURL(item).then((url) => {
-          setImageUrls((prev) => [...prev, url]);
+          newFiles.push({ name: item.name, url });
         });
       });
+
+      setFileInfo((prev) => [...prev, ...newFiles]);
     });
   }, []);
 
   return (
-    
     <div className="App">
-      <h1>Your Attachment area</h1>
-      
+      <h1>Your Attachment Area</h1>
       <input
         type="file"
         onChange={(event) => {
-          setImageUpload(event.target.files[0]);
+          setFileUpload(event.target.files[0]);
         }}
       />
-      <button onClick={uploadFile}> Upload file or assignments</button>
-     
+      <button onClick={uploadFile}> Upload File</button>
       <br />
       <p>
         <a href={url}>{url}</a>
       </p>
-      {imageUrls.map((url) => {
-        return <img src={url} />;
-      })}
+      <ol>
+        {fileInfo.map((file, index) => (
+          <li key={index}>
+            {file.name.endsWith(".jpg") || file.name.endsWith(".jpeg") || file.name.endsWith(".png") ? (
+              <a href={file.url} target="_blank" rel="noopener noreferrer">
+                <img src={file.url} alt={file.name} style={{ maxWidth: '100px' }} />
+              </a>
+            ) : (
+              <span>{file.name}</span>
+            )}
+          </li>
+        ))}
+      </ol>
     </div>
   );
 }
