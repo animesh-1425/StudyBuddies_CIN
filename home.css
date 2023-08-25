@@ -5,8 +5,7 @@
     margin: 0;
     text-decoration: none;
     list-style: none;
-    font-family: 'Poppins', sans-serif;
-
+   
 }
 
 :root{
@@ -15,6 +14,25 @@
     --navlinkh:grey;
 }
 
+h1{
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+h6{
+    font-weight: 700;
+}
+
+h5{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 3rem;
+    font-weight: 800;
+
+}
 
 
 .navbar-brand{
@@ -38,28 +56,35 @@
 }
 
 .main{
-    background-color:  #98DBC6;
+    background-color: #8BC6EC;
+    background-image: linear-gradient( 105.3deg,  rgba(30,39,107,1) 21.8%, rgba(77,118,221,1) 100.2% );
+
 }
 .main h1{
     font-size: 5rem;
-    font-weight: 600;
+    font-weight: 570;
     font-family: 'Rubik Mono One', sans-serif;
+    color: white;
+   
 }
 .btn1{
-    height: 45px;
-    width: 35%;
+   
+    padding: 15px;
     border: none;
     outline: none;
-    background-color:#ec8092;
+    background-color: #f0425f;
     color: white;
     font-weight: 700;
     border-radius: 60px ;
+    text-decoration: none;
 }
 .btn1:hover{
-    background-color:#f0425f;
+    background-color:#ec8092;
+    color: white;
 }
+
 .btn2{
-    background-color: #00A6A6;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #b67fe7 100%);
     border-radius: 60px;
     height: 55px;
     width: 65%;
@@ -70,7 +95,104 @@
 }
 .btn2:hover{
  background: white;
- border: 2px solid #00A6A6;
- color: #00A6A6;
+ border: 2px solid  rgba(30,39,107,1) ;
  scale: 10vh;
 }
+
+ a:hover{
+    color:  rgba(30,39,107,1) ;
+}
+
+.study{
+    background-image: linear-gradient( 105.3deg,  rgba(30,39,107,1) 21.8%, rgba(77,118,221,1) 100.2% );
+}
+
+.study h1{
+    font-weight: 800;
+    color: white;
+}
+
+.btn3{
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color:#f0425f;
+    color: white;
+    font-weight: 700;
+    border-radius: 60px ;
+}
+.btn3:hover{
+    background: white;
+    border: 2px solid #f0425f;
+    color:#f0425f;
+    scale: 10vh;
+}
+
+.newsletter{
+    background-color: black;
+    color: white;
+}
+
+.newsletter input{
+    height: 45px;
+    width: 55%;
+    border: 2px solid white;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.btn{
+    height: 44.5px;
+    width: 100px;
+    background-color: white;
+    margin-left: -10px;
+    margin-bottom: 5px;
+    border: 1px solid white;
+    font-weight: 600;
+    border-radius: 0;
+}
+.footerlogo{
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: white;
+    font-family: 'Lobster', cursive;
+}
+
+.newsletter a{
+    font-size: 1rem;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+
+.fa-brands{
+    font-size: 2rem;
+    cursor: pointer;
+    padding-right: 15px;
+}
+.features p{
+    font-size: 20px;
+}
+.features img{
+    width:550px;
+}
+
+.headings{
+    font-size: 4rem;
+    font-weight: 800;}
+
+    @media only screen and (max-width:912px){
+
+        .main h1{
+            font-size: 3rem;
+            font-weight: 400;
+           
+        }
+
+        .features img{
+            width: 300px;
+        }
+        }
