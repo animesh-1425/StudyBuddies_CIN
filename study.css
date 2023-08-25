@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Kenia&family=League+Spartan:wght@100&family=Lobster&family=Montserrat&family=Orbitron&family=Poppins:wght@100;200;300&family=Roboto&family=Rubik&family=Rubik+Mono+One&family=Russo+One&family=Staatliches&family=VT323&family=Vina+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+h1{
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+h6{
+    font-weight: 700;
+}
+
+h5{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 3rem;
+    font-weight: 800;
+
+}
+
+p{
+    font-size: 25px;
+    font-weight: 400;
+}
+header{
+    background-color: rgba(60, 60, 60, 0.1);
+}
+
+.navbar-brand{
+    font-size: 2rem;
+    color: black;
+    font-family: 'Lobster', cursive;
+}
+.navbar-brand:hover{
+    color: black;
+}
+.nav-link{
+    margin-right: 10px;
+    margin-left: 10px;
+    color: black;
+    font-family: 'Rubik', sans-serif;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+.nav-link:hover{
+    color: grey;
+}
+
+.solo{
+    background-image: linear-gradient( 83.2deg,  rgba(150,93,233,1) 10.8%, rgba(99,88,238,1) 94.3% );
+}
+.together{
+    background-image: linear-gradient( 109.6deg,  rgba(209,0,116,1) 11.2%, rgba(110,44,107,1) 91.1% );
+}
+
+.btn1{
+    height: 55px;
+    width: 45%;
+    border: none;
+    outline: none;
+    background-color: #f0425f;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    border-radius: 60px ;
+}
+.btn1:hover{
+   background-color: transparent;
+   border: 2px solid white;
+   color: white;
+}
+
+.btn2{
+    height: 55px;
+    width: 45%;
+    border: none;
+    outline: none;
+    background-color: rgba(99,88,238,1);
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    border-radius: 60px ;
+}
+.btn2:hover{
+   background-color: transparent;
+   border: 2px solid white;
+   color: white;
+}
+.together h1{
+    color: white;
+}
+.together p{
+    color: rgb(226, 226, 226);
+}
+
+@media only screen and (max-width:912px){
+
+    .solo img{
+        width:300px ;
+    }
+    .together img{
+        width: 300px;
+    }
+    }
